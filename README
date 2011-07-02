@@ -19,6 +19,8 @@ Create and configure a Cassandra keyspace:
 Make this change to your Ruby on Rails app:
  Copy cassandra_store.rb to the lib directory
 
+ Copy error_helper.rb to the app/models directory
+
  Edit the session store initialization file
   config/initializers/session_store.rb:
 
