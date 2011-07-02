@@ -5,6 +5,17 @@ Install the following:
  Cassandra distribution: apache-cassandra-0.8.0
  Cassandra Ruby gem: cassandra (0.11.1)
 
+Start an instance on Cassandra:
+bin/cassandra -f
+
+Create and configure a Cassandra keyspace:
+ bin/cassandra-cli
+ connect 127.0.0.1/9160;
+ create keyspace myapp;
+ use myapp;
+ create column family sessions with key_validation_class=UTF8Type and comparator=UTF8Type;
+ update column family sessions with column_metadata = [{column_name:data, validation_class:UTF8Type},{column_name:updated_at,  validation_class:UTF8Type}];
+
 Make this change to your Ruby on Rails app:
  Copy cassandra_store.rb to the lib directory
 
