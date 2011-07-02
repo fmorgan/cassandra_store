@@ -4,3 +4,11 @@ http://cassandra.apache.org/
 Cassandra distribution: apache-cassandra-0.8.0
 Cassandra Ruby gem: cassandra (0.11.1)
 
+Make this change to your Ruby on Rails app:
+Copy cassandra_store.rb to the lib directory
+
+Edit the session store initialization file
+config/initializers/session_store.rb:
+
+require 'lib/cassandra_store'
+ActionController::Base.session_store = :cassandra_store
