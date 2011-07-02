@@ -25,3 +25,9 @@ Make this change to your Ruby on Rails app:
   require 'lib/cassandra_store'
   ActionController::Base.session_store = :cassandra_store
 
+Verify session storage is working:
+ bin/cassandra-cli
+ connect 127.0.0.1/9160;
+ use myapp;
+ list sessions;
+
