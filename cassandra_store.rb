@@ -10,7 +10,7 @@ module ActionController
         
         puts options.class
 
-        @keyspace = 'cia'
+        @keyspace = 'myapp'
         @column_family = 'sessions'
         @read_consistency = CassandraThrift::ConsistencyLevel::ONE
         @write_consistency = CassandraThrift::ConsistencyLevel::ALL
