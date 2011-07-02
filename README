@@ -6,7 +6,7 @@ Install the following:
  Cassandra Ruby gem: cassandra (0.11.1)
 
 Start an instance on Cassandra:
-bin/cassandra -f
+ bin/cassandra -f
 
 Create and configure a Cassandra keyspace:
  bin/cassandra-cli
